@@ -95,6 +95,6 @@ Trong bai1.md, thay từng dòng “Ảnh cần bổ sung” bằng Markdown tư
 ![API và Client EduSubmit](images/10-edusubmit.png)
 ```
 
-Điền họ tên/MSSV/lớp; thay SV001 và URL ví dụ trong Client/requests.http. Tự đọc và
+Đã điền họ tên/MSSV/lớp và repository thật trong Client/requests.http. Tự đọc và
 chạy lại code theo yêu cầu tự làm của đề. Làm theo README để commit, tag bai1 và push.
 Chụp thêm trang GitHub có code, docs và tag bai1 nếu cần minh chứng nộp bài.

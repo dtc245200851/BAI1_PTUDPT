@@ -1,6 +1,6 @@
 # Bài 1 – Tổng quan hệ thống và MEP
 
-Họ tên: **[Điền họ tên]** — MSSV: **[Điền MSSV]** — Lớp: **[Điền lớp]**
+Họ tên: **Lê Hải Anh** — MSSV: **DTC245200851** — Lớp: **CNTT K23E**
 
 Ngày kiểm tra: 04/11/2026.
 
@@ -105,8 +105,8 @@ REST Client -- GET /api/submissions/{id không có} --> API -- 404 --> REST Clie
 - PowerShell chặn chạy file ps1 theo cấu hình máy; chạy script kiểm tra bằng
   `powershell -NoProfile -ExecutionPolicy Bypass -File .\verify.ps1` (chỉ áp dụng cho tiến trình đó).
 - Không dùng ID cố định cho lượt nộp có thật: REST Client lấy ID từ response POST.
-- Chưa có thông tin cá nhân, repository đích và ảnh sinh viên: cần bổ sung trước khi commit cuối,
-  gắn tag `bai1` và push GitHub theo README.
+- Đã điền thông tin cá nhân và đẩy code lên https://github.com/dtc245200851/BAI1_PTUDPT.
+  Còn bổ sung ảnh sinh viên trước khi commit cuối, gắn tag `bai1` và push GitHub theo README.
 
 ## 8. Tự kiểm tra
 

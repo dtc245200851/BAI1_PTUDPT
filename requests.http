@@ -11,25 +11,25 @@ GET {{api}}/api/assignments
 POST {{api}}/api/submissions
 Content-Type: application/json
 
-{ "assignmentId": 1, "studentCode": "SV001", "repositoryUrl": "https://example.com/sv001/bai-tap-1" }
+{ "assignmentId": 1, "studentCode": "DTC245200851", "repositoryUrl": "https://github.com/dtc245200851/BAI1_PTUDPT" }
 
 ### 400: thiếu mã sinh viên
 POST {{api}}/api/submissions
 Content-Type: application/json
 
-{ "assignmentId": 1, "studentCode": "", "repositoryUrl": "https://example.com/sv001/bai-tap-1" }
+{ "assignmentId": 1, "studentCode": "", "repositoryUrl": "https://github.com/dtc245200851/BAI1_PTUDPT" }
 
 ### 400: mã bài tập không hợp lệ
 POST {{api}}/api/submissions
 Content-Type: application/json
 
-{ "assignmentId": 0, "studentCode": "SV001", "repositoryUrl": "https://example.com/sv001/bai-tap-1" }
+{ "assignmentId": 0, "studentCode": "DTC245200851", "repositoryUrl": "https://github.com/dtc245200851/BAI1_PTUDPT" }
 
 ### 400: thiếu URL repository
 POST {{api}}/api/submissions
 Content-Type: application/json
 
-{ "assignmentId": 1, "studentCode": "SV001" }
+{ "assignmentId": 1, "studentCode": "DTC245200851" }
 
 ### 200: đọc lại lượt nộp của request có tên createSubmission
 GET {{api}}/api/submissions/{{createSubmission.response.body.$.id}}

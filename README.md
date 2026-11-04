@@ -15,20 +15,17 @@ Mở `requests.http` bằng REST Client. Chạy request `createSubmission` trư�
 đọc lại để lấy ID tự động. API lưu dữ liệu trong RAM: khởi động lại sẽ mất các lượt nộp.
 Client chạy lại sẽ tạo GUID mới. Đổi cổng bằng tham số dòng lệnh và biến `@api`.
 
-Trước khi nộp: thay SV001 và URL ví dụ trong Client/requests.http, điền thông tin
+Đã điền thông tin Lê Hải Anh, DTC245200851, CNTT K23E và repository thật. Trước khi nộp, kiểm tra thông tin
 trong `docs/bai1.md`, bổ sung ảnh theo `docs/CHUP-ANH.md`.
 Code được hỗ trợ viết bằng Codex; cần tự đọc, chạy lại và thực hành debug theo đề.
 
-Sau khi hoàn thiện ảnh và nhật ký, tạo repository GitHub trống EduSubmit-MSSV,
-rồi chạy tại thư mục này (thay đường dẫn GitHub):
+Repository đã được tạo và kết nối: https://github.com/dtc245200851/BAI1_PTUDPT.
+Sau khi hoàn thiện ảnh và nhật ký, chạy tại thư mục này:
 
 ```powershell
-git init
 git add .
 git commit -m "Bai 1: API, Client, mo rong va nhat ky thuc hanh"
 git tag bai1
-git branch -M main
-git remote add origin https://github.com/TEN-TAI-KHOAN/EduSubmit-MSSV.git
 git push -u origin main --tags
 ```
 

@@ -9,8 +9,8 @@ foreach (var assignment in assignments ?? []) {
     Console.WriteLine($"- {assignment.Id}: {assignment.Title}");
 }
 
-// Thay SV001 và URL repository bằng thông tin thật trước khi nộp bài.
-var request = new CreateSubmissionRequest(1, "SV001", "https://example.com/sv001/bai-tap-1");
+// Thông tin sinh viên và repository bài thực hành.
+var request = new CreateSubmissionRequest(1, "DTC245200851", "https://github.com/dtc245200851/BAI1_PTUDPT");
 using var response = await http.PostAsJsonAsync("/api/submissions", request);
 response.EnsureSuccessStatusCode();
 var result = await response.Content.ReadFromJsonAsync<SubmissionResult>()
