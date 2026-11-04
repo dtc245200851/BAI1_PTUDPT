@@ -1,0 +1,38 @@
+@api = http://localhost:5000
+
+### 200: trạng thái API
+GET {{api}}/
+
+### 200: danh sách bài tập
+GET {{api}}/api/assignments
+
+### 201: tạo lượt nộp; chạy request này trước request đọc lại
+# @name createSubmission
+POST {{api}}/api/submissions
+Content-Type: application/json
+
+{ "assignmentId": 1, "studentCode": "SV001", "repositoryUrl": "https://example.com/sv001/bai-tap-1" }
+
+### 400: thiếu mã sinh viên
+POST {{api}}/api/submissions
+Content-Type: application/json
+
+{ "assignmentId": 1, "studentCode": "", "repositoryUrl": "https://example.com/sv001/bai-tap-1" }
+
+### 400: mã bài tập không hợp lệ
+POST {{api}}/api/submissions
+Content-Type: application/json
+
+{ "assignmentId": 0, "studentCode": "SV001", "repositoryUrl": "https://example.com/sv001/bai-tap-1" }
+
+### 400: thiếu URL repository
+POST {{api}}/api/submissions
+Content-Type: application/json
+
+{ "assignmentId": 1, "studentCode": "SV001" }
+
+### 200: đọc lại lượt nộp của request có tên createSubmission
+GET {{api}}/api/submissions/{{createSubmission.response.body.$.id}}
+
+### 404: lượt nộp không tồn tại
+GET {{api}}/api/submissions/00000000-0000-0000-0000-000000000000
