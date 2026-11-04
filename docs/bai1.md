@@ -13,9 +13,11 @@ Hướng dẫn ảnh: [CHUP-ANH.md](CHUP-ANH.md). Lưu ảnh trong `docs/images/
 
 - .NET SDK kiểm tra được: `10.0.403`.
 - Git: `2.55.0.windows.5`.
-- Chưa xác nhận extension VS Code và ảnh Hello World; sinh viên thực hiện theo hướng dẫn ảnh.
+- Ảnh đã thể hiện phiên bản SDK, Git và Hello World. Chưa có ảnh xác nhận extension VS Code.
 
-Ảnh cần bổ sung: `images/01-moi-truong.png`.
+![Phiên bản .NET, Git và kết quả Hello World](images/2aOboRADMV6sMKJiOorBxbkHUw32jzgX7CEfeMN6.jpg)
+
+Ảnh có lần chạy sai thư mục; sau khi chuyển vào project HelloPtudpt, chương trình in `Hello, World!`.
 
 ## 2. MepDemo (Bước 7)
 
@@ -30,7 +32,9 @@ Hướng dẫn ảnh: [CHUP-ANH.md](CHUP-ANH.md). Lưu ảnh trong `docs/images/
    - Publish–subscribe: sự kiện được phát đến mọi bên đã đăng ký.
    - Streaming/push: nhận nhiều cập nhật liên tiếp mà không gửi yêu cầu mới cho từng cập nhật.
 
-Ảnh cần bổ sung: `images/02-mep.png`.
+![Request-response, one-way và queue với hai worker](images/2aOboRADMVNhwoGLKtp96CwYXn26CZn4iGObx1xw.jpg)
+
+![Publish-subscribe tới ba dịch vụ và streaming](images/2aOboRADMVSlknjFGgZmzgmbV5T4z6FASCBNQRYO.jpg)
 
 ## 3. BasicWebApi (Bước 8)
 
@@ -43,9 +47,16 @@ Hướng dẫn ảnh: [CHUP-ANH.md](CHUP-ANH.md). Lưu ảnh trong `docs/images/
 3. POST tạo tài nguyên mới nên trả 201 Created, kèm Location chỉ URI tài nguyên;
    200 OK chỉ thể hiện xử lý thành công, không diễn đạt cụ thể việc tạo mới.
 
-Ảnh cần bổ sung: `images/03-basic-200.png`, `04-basic-201.png`,
-`05-basic-400.png`, `06-basic-ja.png`, `07-debug.png`.
-Thao tác breakpoint/debug phải thực hiện trực tiếp trong IDE.
+![BasicWebApi GET trả 200 OK](images/2aOboRADMVjl4ZRODb2VVdckzsqC74j79bPl0Xj6.jpg)
+
+![POST greetings trả 201 Created và Location](images/2aOboRADMVaoREkxSFkx2msSB8SEEv33P8pa10yW.jpg)
+
+Lưu ý: ảnh 201 hiển thị response tên Binh trong khi body đang mở là Hanh;
+cần gửi lại request và chụp nếu muốn minh chứng request/response khớp nhau.
+
+![Lời chào tiếng Việt trên trình duyệt](images/2aOboRADMVE3Wgd5Voo9RI1y1k4bi2sxikyXydLU.jpg)
+
+Chưa có ảnh BasicWebApi 400, tiếng Nhật và breakpoint/debug.
 
 ## 4. MiniDistributedSystem (Bước 9)
 
@@ -58,7 +69,7 @@ Thao tác breakpoint/debug phải thực hiện trực tiếp trong IDE.
    Content-Type và cấu trúc JSON (tên trường, kiểu dữ liệu).
 3. Truyền địa chỉ qua tham số giúp đổi máy chủ/cổng/môi trường mà không sửa và biên dịch code.
 
-Ảnh cần bổ sung: `images/08-mini-api-client.png`.
+Chưa có ảnh hai terminal API + Client của MiniDistributedSystem.
 
 ## 5. Thí nghiệm lỗi (Bước 10)
 
@@ -73,7 +84,7 @@ Dùng cổng 15050/15051 thay cho 5050/5000 để tránh tiến trình đang ch�
 | c | Mã sinh viên rỗng bị từ chối | POST trả 400; EnsureSuccessStatusCode ném HttpRequestException | Khớp | Hàm ném lỗi khi status ngoài 200–299. Máy chủ tự kiểm tra vì client có thể bị thay đổi hoặc gửi request trực tiếp. |
 | d | Sai cổng thất bại; đổi tham số URL sẽ chạy được | Gọi 15051: connection refused; truyền http://localhost:15050: nhận danh sách và received | Khớp | Địa chỉ kết nối là cấu hình lúc chạy, không cần sửa mã nguồn. |
 
-Ảnh khi chạy lại: `images/09-thi-nghiem.png` (có thể tách thành nhiều ảnh).
+Chưa có ảnh khi sinh viên chạy lại bốn thí nghiệm lỗi.
 
 ## 6. Dự án EduSubmit (Bước 11–12)
 
@@ -96,7 +107,10 @@ Client -- GET /api/submissions/{id} ----> API -- 200 + JSON lượt nộp --> Cl
 REST Client -- GET /api/submissions/{id không có} --> API -- 404 --> REST Client
 ```
 
-Ảnh cần bổ sung: `images/10-edusubmit.png`, `11-doc-lai-200.png`, `12-khong-co-404.png`.
+![Client EduSubmit nộp bài và đọc lại cùng GUID thành công](images/2aOboRADPZaYUdiPT0LStZ2dlAUmM2R6NV5NziLI.jpg)
+
+Ảnh thể hiện MSSV DTC245200851, trạng thái received và GUID đọc lại khớp lượt nộp.
+Chưa có ảnh REST Client đọc lượt nộp trả 200 và lượt nộp không tồn tại trả 404.
 
 ## 7. Khó khăn và cách giải quyết
 
@@ -106,7 +120,8 @@ REST Client -- GET /api/submissions/{id không có} --> API -- 404 --> REST Clie
   `powershell -NoProfile -ExecutionPolicy Bypass -File .\verify.ps1` (chỉ áp dụng cho tiến trình đó).
 - Không dùng ID cố định cho lượt nộp có thật: REST Client lấy ID từ response POST.
 - Đã điền thông tin cá nhân và đẩy code lên https://github.com/dtc245200851/BAI1_PTUDPT.
-  Còn bổ sung ảnh sinh viên trước khi commit cuối, gắn tag `bai1` và push GitHub theo README.
+  Đã chèn các ảnh sinh viên cung cấp vào nhật ký. Còn thiếu ảnh được ghi rõ ở từng mục;
+  chưa gắn tag `bai1` cho bản nộp hoàn chỉnh.
 
 ## 8. Tự kiểm tra
 
